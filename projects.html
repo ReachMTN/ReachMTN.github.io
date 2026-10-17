@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Data analytics and business analysis projects by Minh-Thi Nguyen."><title>Projects | Minh-Thi Nguyen</title><link rel="stylesheet" href="styles.css"><style>
-.projects-wide{width:min(1900px,calc(100% - 40px));margin:28px auto 54px;display:grid;gap:14px}
-.project-summary-box,.dashboard-demo-box,.secondary-project-box{border:1px solid rgba(193,203,255,.2);border-radius:16px;background:linear-gradient(145deg,rgba(18,22,41,.97),rgba(10,12,26,.97));box-shadow:0 14px 38px rgba(0,0,0,.18);overflow:hidden}
-.project-summary-box{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,.9fr);gap:28px;padding:26px}
-.project-kicker,.demo-kicker{margin:0 0 9px;color:#67e8f9;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:850}
-.project-summary-box h1{font-size:clamp(25px,2.4vw,36px);letter-spacing:-.04em;line-height:1.1;margin:0 0 12px;color:#f7f7ff}
-.summary-lead,.secondary-project-box p{font-size:14px;line-height:1.65;color:#d8def2;margin:0 0 12px}
-.feature-list{padding-left:20px;margin:10px 0 16px;color:#e6e9f7;font-size:13px;line-height:1.65}.feature-list li{padding-left:3px;margin:3px 0}.project-tags{display:flex;gap:8px;flex-wrap:wrap}.project-tags span{border:1px solid rgba(167,139,250,.38);border-radius:99px;padding:6px 11px;font-size:11px;color:#e7ddff;background:rgba(139,92,246,.07)}
-.project-summary-side{border-left:1px solid rgba(193,203,255,.2);padding-left:28px;display:flex;flex-direction:column;justify-content:center;gap:18px}.summary-actions{display:flex;flex-wrap:wrap;gap:10px}.summary-button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#f7f8ff;border:1px solid rgba(193,203,255,.32);border-radius:9px;padding:11px 14px;font-size:12px;font-weight:750;background:rgba(255,255,255,.035)}.summary-button.primary{border-color:#22d3ee;color:#67e8f9;background:rgba(34,211,238,.08)}.summary-button:hover{background:rgba(103,232,249,.12)}.data-note{color:#b7bfd8;font-size:12px;line-height:1.6;margin:0}.data-note strong{color:#f3f5ff}
-.dashboard-demo-box{padding:0}.demo-heading{padding:21px 26px 17px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid rgba(193,203,255,.18)}.demo-kicker{margin-bottom:5px}.demo-heading h2{font-size:clamp(22px,2vw,30px);margin:0;letter-spacing:-.035em}.demo-contents{font-size:12px;color:#b7c2e7;white-space:nowrap}.demo-contents span{color:#67e8f9;padding:0 5px}.dashboard-frame{width:100%;background:#080913}.dashboard-frame iframe{display:block;width:100%;height:780px;border:0;background:#080913}
-.secondary-project-box{padding:24px 26px}.secondary-project-box h2{font-size:22px;margin:0 0 8px}.secondary-project-box .feature-list{margin-bottom:14px}
-@media(min-width:1500px){.projects-wide{width:min(2000px,calc(100% - 48px))}.dashboard-frame iframe{height:820px}.project-summary-box{padding:30px 34px}}
-@media(max-width:850px){.projects-wide{width:calc(100% - 20px);margin:14px auto 30px}.project-summary-box{grid-template-columns:1fr;padding:20px;gap:20px}.project-summary-side{border-left:0;border-top:1px solid rgba(193,203,255,.2);padding:18px 0 0}.demo-heading{padding:18px;align-items:flex-start;flex-direction:column}.demo-contents{white-space:normal}.dashboard-frame iframe{height:1200px}.summary-lead{font-size:13px}}
-</style>
-</head><body>
+<meta name="description" content="Data analytics and business analysis projects by Minh-Thi Nguyen."><title>Projects | Minh-Thi Nguyen</title><link rel="stylesheet" href="styles.css"></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html">MINH-THI NGUYEN</a><nav aria-label="Main navigation">
 <a href="index.html">Home</a><a href="projects.html" class="active">Projects</a><a href="experience.html">Experience</a><a href="education.html">Education</a><a href="contact.html">Contact</a></nav></div></header>
-<main class="projects-wide">
-  <section class="project-summary-box">
-    <div class="project-summary-main">
-      <p class="project-kicker">Featured Analytics Project · Power BI · SQL · Excel</p>
-      <h1>Purchase &amp; Sales &amp; Inventory Analytics</h1>
-      <p class="summary-lead">This project analyzes purchase activity, target resale revenue, gross profit, and inventory status using Power BI-style reporting and SQL. The dashboard compares product models, storage capacities, colors, acquisition costs, and estimated resale margins while organizing purchase, preorder, and sale records in a transaction ledger.</p>
-      <ul class="feature-list">
-        <li><strong>Track key performance indicators:</strong> acquisition cost, estimated resale revenue, gross profit potential, unit count, and average margin.</li>
-        <li><strong>Compare product performance:</strong> review gross profit by model and compare purchase costs against target resale values over time.</li>
-        <li><strong>Explore transactions:</strong> filter by date, product model, storage, color, and status, then scroll the ledger independently.</li>
-        <li><strong>Apply data analysis techniques:</strong> organize records with SQL aggregations and data-quality checks, and use Excel-style lookups, PivotTables, and conditional formatting.</li>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">Selected Work</p><h1>Projects that turn <span class="gradient-text">data into action.</span></h1>
+<p class="lead">Explore dashboards and analytical projects focused on spending patterns, checkout activity, business performance, and data quality.</p></section>
+<section class="content" style="padding:0 0 12px;border-bottom:0;">
+  <article class="project dashboard-project-details">
+    <div class="project-main-copy">
+      <div class="project-label">Featured Analytics Project · Power BI · SQL · Excel</div>
+      <h2>Purchase &amp; Sales &amp; Inventory Analytics</h2>
+      <p>This project analyzes purchase activity, target resale revenue, gross profit, and inventory status using Power BI-style reporting and SQL. It compares product models, storage capacities, colors, acquisition costs, and estimated resale margins while organizing purchase, preorder, and sale records in a transaction ledger.</p>
+      <ul>
+        <li><strong>Track key performance indicators:</strong> acquisition cost, target resale revenue, gross profit potential, unit count, and average margin.</li>
+        <li><strong>Compare product performance:</strong> review gross profit by model and purchase costs against target resale values over time.</li>
+        <li><strong>Explore transactions:</strong> filter by date, model, storage, color, and status, with an independently scrollable ledger.</li>
+        <li><strong>Apply analytics techniques:</strong> SQL aggregations, data-quality checks, KPI design, and inventory review.</li>
       </ul>
-      <div class="project-tags"><span>Power BI</span><span>SQL</span><span>DAX Concepts</span><span>Data Modeling</span><span>KPIs</span><span>Sales Analysis</span><span>Inventory Analysis</span><span>Data Quality</span></div>
+      <div class="tag-list"><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">DAX Concepts</span><span class="tag">Data Modeling</span><span class="tag">KPIs</span><span class="tag">Sales Analysis</span><span class="tag">Inventory Analysis</span><span class="tag">Data Quality</span></div>
     </div>
-    <aside class="project-summary-side">
-      <div class="summary-actions"><a class="summary-button primary" href="powerbi_build_guide.html">Power BI Build Guide</a><a class="summary-button" href="checkout_transactions_sample.csv" download>Download Sample Data</a><a class="summary-button" href="checkout_analytics.sql" download>View SQL Script</a></div>
-      <p class="data-note"><strong>Data note:</strong> this dashboard uses synthetic demonstration data. Resale margins are modeled targets, not verified sales or personal transaction records. Gross profit excludes fees, taxes, shipping, and returns.</p>
+    <aside class="project-side-actions">
+      <div class="project-actions"><a class="button secondary" href="checkout_analytics.sql" target="_blank" rel="noopener">View SQL Script</a><a class="button primary" href="powerbi_build_guide.html">Power BI Build Guide</a><a class="button secondary" href="checkout_transactions_sample.csv" download>Download Sample Data</a></div>
+      <p class="small">Note: This is synthetic demonstration data. Resale margins are modeled targets, not verified sales or personal transaction records.</p>
     </aside>
-  </section>
+  </article>
+</section>
+<section class="dashboard-demo-box" aria-label="Interactive dashboard demo">
+  <div class="dashboard-demo-heading">
+    <div><p class="project-label">INTERACTIVE DEMO</p><h2>Explore the Dashboard</h2></div>
+    <span class="tools">Live filters · Charts · Transaction ledger</span>
+  </div>
+  <div class="dashboard-frame"><iframe src="dashboard.html" title="Purchase &amp; Sales &amp; Inventory Analytics interactive demo" loading="eager"></iframe></div>
+</section>
+<section class="content"><div class="project-list"><article class="project"><div class="project-top"><div><div class="project-label">Power BI · SQL</div><h2>IT Support Operations &amp; SLA Compliance Dashboard</h2></div><span class="tools">Dashboard &amp; Reporting</span></div>
+<p>Dashboard concept to monitor ticket volume, SLA performance, and resolution trends, helping teams identify workload patterns and prioritize follow-up.</p>
+<ul><li>Structure data using SQL joins, common table expressions (CTEs), and aggregations.</li><li>Define measures for SLA compliance, average resolution time, and ticket status visibility.</li><li>Use dashboard visuals and conditional formatting to highlight exceptions and bottlenecks.</li></ul><div class="tag-list"><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">KPI Design</span><span class="tag">SLA Monitoring</span></div></article>
 
-  <section class="dashboard-demo-box" aria-label="Interactive dashboard demo">
-    <div class="demo-heading"><div><p class="demo-kicker">Interactive Demo</p><h2>Explore the Dashboard</h2></div><div class="demo-contents">Live Filters <span>·</span> Charts <span>·</span> Transaction Ledger</div></div>
-    <div class="dashboard-frame"><iframe src="dashboard.html" title="Purchase and sales inventory analytics dashboard" loading="eager"></iframe></div>
-  </section>
-
-  <section class="secondary-project-box">
-    <div class="project-kicker">Additional Project · Power BI · SQL</div>
-    <h2>IT Support Operations &amp; SLA Compliance Dashboard</h2>
-    <p>Dashboard concept to monitor ticket volume, SLA performance, and resolution trends, helping teams identify workload patterns and prioritize follow-up.</p>
-    <ul class="feature-list"><li>Structure data using SQL joins, common table expressions (CTEs), and aggregations.</li><li>Define measures for SLA compliance, average resolution time, and ticket status visibility.</li><li>Use dashboard visuals and conditional formatting to highlight exceptions and bottlenecks.</li></ul>
-    <div class="project-tags"><span>Power BI</span><span>SQL</span><span>KPI Design</span><span>SLA Monitoring</span></div>
-  </section>
-</main><footer><div class="wrap">© 2026 Minh-Thi Nguyen · Business Analysis &amp; Data Analytics Portfolio</div></footer></body></html>
+</div></section></main><footer><div class="wrap">© 2026 Minh-Thi Nguyen · Business Analysis &amp; Data Analytics Portfolio</div></footer></body></html>

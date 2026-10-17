@@ -45,3 +45,7 @@ Use a black / charcoal background, white labels, electric blue and green chart s
 
 ## 6. Data note
 All inventory rows, sourcing discounts, resale prices, and margins are synthetic portfolio examples, not actual sales or guaranteed market prices. Gross profit excludes fees, taxes, shipping, returns, and other operating expenses. Check current purchase costs and actual resale demand before making business decisions.
+
+
+## Visual starter
+Open `powerbi_build_guide.html` for a visual guide with a chart preview calculated from the bundled CSV, a base-data preview, and download links for the CSV, SQL, and DAX measures. The HTML preview is a reference for building the report in Power BI Desktop; it is not a `.pbix` file.
