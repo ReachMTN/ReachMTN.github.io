@@ -1,0 +1,22 @@
+checkout_id,checkout_datetime,product_name,product_color,price_usd,retailer,status,saved_usd,failure_flag,profile,account,order_reference
+CHK-1001,2026-10-15 08:25:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 2,Demo Account 1,DEMO-872246
+CHK-1008,2026-10-15 08:46:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 1,Demo Account 1,DEMO-205907
+CHK-1013,2026-10-15 11:36:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 4,Demo Account 2,DEMO-774079
+CHK-1002,2026-10-15 17:18:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 1,Demo Account 1,DEMO-198246
+CHK-1012,2026-10-16 08:57:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 3,Demo Account 2,DEMO-380746
+CHK-1007,2026-10-16 09:20:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 5,Demo Account 1,DEMO-838797
+CHK-1019,2026-10-16 09:54:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 2,Demo Account 2,DEMO-103402
+CHK-1014,2026-10-16 10:26:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 2,Demo Account 3,DEMO-688637
+CHK-1005,2026-10-16 11:40:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 1,Demo Account 2,DEMO-201414
+CHK-1003,2026-10-16 11:58:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 5,Demo Account 2,DEMO-331148
+CHK-1010,2026-10-16 12:33:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 5,Demo Account 3,DEMO-356702
+CHK-1004,2026-10-16 12:44:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 4,Demo Account 2,DEMO-391369
+CHK-1009,2026-10-16 12:44:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 2,Demo Account 2,DEMO-472528
+CHK-1006,2026-10-16 13:52:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 4,Demo Account 3,DEMO-230889
+CHK-1017,2026-10-16 15:12:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 4,Demo Account 3,DEMO-590785
+CHK-1011,2026-10-16 15:53:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 5,Demo Account 1,DEMO-817870
+CHK-1020,2026-10-16 16:32:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 3,Demo Account 3,DEMO-632323
+CHK-1021,2026-10-17 11:23:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 2,Demo Account 3,DEMO-916449
+CHK-1018,2026-10-17 12:17:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 5,Demo Account 2,DEMO-905934
+CHK-1015,2026-10-17 12:29:00,iPhone Duo 256GB Star White,Star White,2000,Apple US,Completed,0,0,Demo Profile 3,Demo Account 1,DEMO-245051
+CHK-1016,2026-10-17 16:25:00,iPhone Duo 256GB Night Sky,Night Sky,2000,Apple US,Completed,0,0,Demo Profile 1,Demo Account 1,DEMO-757924
