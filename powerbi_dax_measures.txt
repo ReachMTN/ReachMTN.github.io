@@ -1,0 +1,18 @@
+-- Power BI DAX starter measures
+-- Rename the imported CSV table to PhoneInventoryTransactions in Model view.
+
+Acquisition Cost = SUM(PhoneInventoryTransactions[cost])
+
+Target Resale Revenue = SUM(PhoneInventoryTransactions[resale])
+
+Gross Profit Potential = SUM(PhoneInventoryTransactions[profit])
+
+Units = COUNTROWS(PhoneInventoryTransactions)
+
+Average Profit per Unit = DIVIDE([Gross Profit Potential], [Units], 0)
+
+Target Gross Margin % = DIVIDE([Gross Profit Potential], [Target Resale Revenue], 0)
+
+Sold Units = CALCULATE([Units], PhoneInventoryTransactions[status] = "Sold")
+
+Inventory Units = CALCULATE([Units], PhoneInventoryTransactions[status] <> "Sold")
