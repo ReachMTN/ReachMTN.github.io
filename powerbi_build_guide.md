@@ -1,54 +1,47 @@
-# Power BI Build Guide
+# Power BI Build Guide — Phone Resale & Inventory Analytics
 
 ## 1. Load the data
-For a quick start, use **Get data → Text/CSV** and select `checkout_transactions_sample.csv`.
-For the SQL workflow, load the CSV into SQL Server, run `checkout_analytics.sql`, then connect Power BI to `dbo.CheckoutTransactions`.
+Use **Get data → Text/CSV** and select `checkout_transactions_sample.csv`. The dataset contains 48 synthetic inventory/resale records across several iPhone models, storage capacities, and colors. Alternatively, load it into SQL Server using `checkout_analytics.sql` and connect Power BI to `dbo.PhoneInventoryTransactions`.
 
 ## 2. Set data types
 - `checkout_datetime`: Date/Time
-- `price_usd`, `saved_usd`: Fixed decimal number / Currency
-- `failure_flag`: Whole number
-- Other fields: Text
+- `storage_gb`, `units`: Whole number
+- `purchase_cost_usd`, `resale_price_usd`, `gross_profit_usd`: Fixed decimal number / Currency
+- Other descriptive fields: Text
 
 Create a date-only column:
 ```DAX
-Checkout Date = DATE(
-    YEAR('CheckoutTransactions'[checkout_datetime]),
-    MONTH('CheckoutTransactions'[checkout_datetime]),
-    DAY('CheckoutTransactions'[checkout_datetime])
+Transaction Date = DATE(
+    YEAR('PhoneInventoryTransactions'[checkout_datetime]),
+    MONTH('PhoneInventoryTransactions'[checkout_datetime]),
+    DAY('PhoneInventoryTransactions'[checkout_datetime])
 )
 ```
 
 ## 3. Create measures
 ```DAX
-Total Spent = SUM('CheckoutTransactions'[price_usd])
+Acquisition Cost = SUM('PhoneInventoryTransactions'[purchase_cost_usd])
 
-Total Saved = SUM('CheckoutTransactions'[saved_usd])
+Estimated Resale Revenue = SUM('PhoneInventoryTransactions'[resale_price_usd])
 
-Total Checkouts = DISTINCTCOUNT('CheckoutTransactions'[checkout_id])
+Gross Profit Potential = SUM('PhoneInventoryTransactions'[gross_profit_usd])
 
-Failed Checkouts =
-CALCULATE(
-    DISTINCTCOUNT('CheckoutTransactions'[checkout_id]),
-    'CheckoutTransactions'[failure_flag] = 1
-)
+Units = SUM('PhoneInventoryTransactions'[units])
 
-Failure Rate =
-DIVIDE([Failed Checkouts], [Total Checkouts], 0)
+Average Gross Profit per Unit = DIVIDE([Gross Profit Potential], [Units], 0)
 
-Average Checkout Value =
-DIVIDE([Total Spent], [Total Checkouts], 0)
+Gross Margin % = DIVIDE([Gross Profit Potential], [Estimated Resale Revenue], 0)
 ```
 
 ## 4. Recommended visuals
-- Four cards: `[Total Spent]`, `[Total Saved]`, `[Total Checkouts]`, `[Failed Checkouts]`
-- Line chart: Axis = `Checkout Date`; Values = `[Total Spent]`
-- Bar chart: Axis = `product_color`; Values = `[Total Spent]`
-- Table: `checkout_datetime`, `product_name`, `price_usd`, `retailer`, `status`
-- Slicers: `Checkout Date`, `product_color`, `retailer`, `status`
+- Four cards: `[Acquisition Cost]`, `[Estimated Resale Revenue]`, `[Gross Profit Potential]`, `[Units]`
+- Line chart: Axis = `Transaction Date`; Values = acquisition cost and estimated resale revenue
+- Bar chart: Axis = `product_model`; Values = `[Gross Profit Potential]`
+- Table: `product_name`, `product_color`, `status`, `purchase_cost_usd`, `resale_price_usd`, `gross_profit_usd`
+- Slicers: `Transaction Date`, `product_model`, `storage_gb`, `product_color`, `status`
 
 ## 5. Formatting
-Use a black / charcoal background, white labels, electric blue line, and subtle borders to match the reference dashboard. Use consistent currency formatting (USD) and display dates in a readable format.
+Use a black / charcoal background, white labels, electric blue and green chart series, and subtle borders to match the portfolio theme. Format all financial measures as USD.
 
-## 6. Public portfolio privacy
-The screenshot contains blurred profile, account, and order fields. Do not publish those real identifiers. Use the supplied synthetic CSV or anonymize all transaction-level information before publishing.
+## 6. Data note
+All inventory rows, sourcing discounts, resale prices, and margins are synthetic portfolio examples, not actual sales or guaranteed market prices. Gross profit excludes fees, taxes, shipping, returns, and other operating expenses. Check current purchase costs and actual resale demand before making business decisions.

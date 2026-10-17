@@ -63,3 +63,6 @@ footer{border-top:1px solid var(--line);padding:24px 0 34px;color:var(--muted);f
  .section-head{grid-template-columns:1fr;gap:10px}
  .project-top,.jobtop,.contactbox,.education{flex-direction:column}
 }
+
+/* Embedded interactive dashboard within the featured project card */
+.embedded-dashboard{margin-top:20px;border:1px solid rgba(103,232,249,.22);border-radius:12px;overflow:hidden;background:#080913}.embedded-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;background:rgba(103,232,249,.05);border-bottom:1px solid rgba(193,203,255,.16);font-size:12px}.embedded-heading strong{color:#67e8f9}.embedded-heading span{color:#b1b7d2;font-size:10px}.embedded-dashboard iframe{display:block;width:100%;height:1180px;border:0;background:#080913}@media(max-width:760px){.embedded-dashboard iframe{height:1460px}.embedded-heading{align-items:flex-start;flex-direction:column}}

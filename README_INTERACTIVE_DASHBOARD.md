@@ -1,15 +1,11 @@
-# ReachMTN Interactive Analytics Portfolio
+# Interactive Phone Resale & Inventory Analytics
 
-Upload all files in this package to the root of the GitHub repository `ReachMTN/ReachMTN.github.io`, replacing files with the same names, then commit changes.
+The interactive dashboard is embedded directly inside the featured project card on `projects.html`; `dashboard.html` supplies the dashboard content for that embedded frame.
 
-## Interactive dashboard
-- `dashboard.html` is a standalone, browser-based interactive dashboard.
-- `projects.html` links to `dashboard.html`.
-- The dashboard includes filters, KPI cards, a spending trend chart, product comparison bars, and recent checkout records.
-- It uses synthetic demo data embedded in the page and does not connect to a live database.
+- 48 synthetic records across iPhone 18 Pro Max, iPhone 18 Pro, iPhone Duo, iPhone 17, iPhone Air, iPhone 17e, and iPhone 16.
+- Product variants include different storage capacities and colors.
+- Interactive filters: date range, model, storage, color, and inventory status.
+- KPIs: acquisition cost, estimated resale revenue, gross profit potential, unit count, and average margin.
+- `checkout_transactions_sample.csv` contains the sample data; `checkout_analytics.sql` contains SQL analysis examples.
 
-## Additional resources
-- `checkout_analytics.sql`: SQL Server table and analytics queries.
-- `checkout_transactions_sample.csv`: synthetic sample dataset.
-- `powerbi_build_guide.md`: guide for building a native Power BI report.
-- `checkout-dashboard-preview.png`: static screenshot preview.
+**Important:** Purchase costs and resale values are synthetic assumptions for portfolio demonstration, not real transactions or guaranteed market prices. Gross profit excludes fees, taxes, shipping, returns, and other operating expenses.
