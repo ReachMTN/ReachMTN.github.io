@@ -1,4 +1,4 @@
-# Power BI Build Guide — Phone Resale & Inventory Analytics
+# Power BI Build Guide — Purchase & Sales & Inventory Analytics
 
 ## 1. Load the data
 Use **Get data → Text/CSV** and select `checkout_transactions_sample.csv`. The dataset contains 48 synthetic inventory/resale records across several iPhone models, storage capacities, and colors. Alternatively, load it into SQL Server using `checkout_analytics.sql` and connect Power BI to `dbo.PhoneInventoryTransactions`.

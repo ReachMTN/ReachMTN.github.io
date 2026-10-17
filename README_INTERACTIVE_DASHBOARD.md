@@ -1,4 +1,4 @@
-# Interactive Phone Resale & Inventory Analytics
+# Purchase & Sales & Inventory Analytics
 
 The interactive dashboard is embedded directly inside the featured project card on `projects.html`; `dashboard.html` supplies the dashboard content for that embedded frame.
 

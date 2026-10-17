@@ -1,4 +1,4 @@
-# Phone Resale & Inventory Analytics Dashboard
+# Purchase & Sales & Inventory Analytics Dashboard
 
 Interactive portfolio demo with synthetic records.
 
