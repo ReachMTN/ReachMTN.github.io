@@ -1,212 +1,709 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minh-Thi Nguyen | Data Analytics Portfolio</title>
-  <meta name="description"
-        content="Data analytics portfolio featuring SQL,
-        Power BI, Excel, and business intelligence projects.">
+  <meta name="description" content="Minh-Thi Nguyen's portfolio in business analysis, data analytics, Power BI, SQL, and operational reporting.">
+  <title>Minh-Thi Nguyen | Business Analyst & Data Analytics</title>
   <style>
+    :root {
+      --ink: #171717;
+      --muted: #5c5c5c;
+      --line: #dedede;
+      --soft: #f6f6f6;
+      --white: #ffffff;
+      --max: 1060px;
+    }
+
     * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #171717;
-      background: #fff;
-      line-height: 1.7;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
     }
-    header, main, footer {
-      max-width: 1000px;
-      margin: auto;
-      padding: 24px;
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
     }
+
     header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.96);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    nav a:hover, a:hover { text-decoration: underline; }
+
+    .hero { padding: 82px 0 70px; }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      letter-spacing: -.045em;
+      line-height: 1.04;
+      max-width: 850px;
+      margin: 0 0 22px;
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: 18px;
+      color: #444;
+      margin: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 16px;
+      border: 1px solid var(--ink);
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact { padding: 20px 22px 20px 0; }
+
+    .fact + .fact {
+      border-left: 1px solid var(--line);
+      padding-left: 22px;
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    section {
+      padding: 58px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 25px;
+      letter-spacing: -.025em;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin: 0;
+      max-width: 680px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .skill-card, .project, .job {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .skill-card h3, .project h3, .job h3 {
+      font-size: 16px;
+      margin: 0 0 9px;
+    }
+
+    .skill-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 5px 10px;
+      border: 1px solid #d3d3d3;
+      border-radius: 20px;
+    }
+
+    .project-list, .experience-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .project-top, .job-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .project-label {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .tools {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 4px 0 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 12px 0 0;
+    }
+
+    li { margin: 6px 0; }
+
+    .project p, .job p { margin: 8px 0; }
+
+    .job-meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .education {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .education:first-of-type { border-top: 0; }
+
+    .education p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .education time {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .contact-box {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      border-bottom: 1px solid #ddd;
+      gap: 24px;
     }
-    nav a {
-      color: #171717;
-      margin-left: 18px;
-      text-decoration: none;
-      font-size: 14px;
+
+    .contact-box p {
+      margin: 8px 0 0;
+      color: var(--muted);
     }
-    .hero { padding: 76px 0 60px; }
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
+
+    footer {
+      padding: 24px 0 34px;
+      color: var(--muted);
       font-size: 12px;
     }
-    h1 {
-      font-size: clamp(34px, 6vw, 58px);
-      line-height: 1.15;
-      margin: 12px 0;
-    }
-    h2 { font-size: 28px; }
-    .muted { color: #555; }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-    .skills span {
-      border: 1px solid #ccc;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-    }
-    .section {
-      padding: 32px 0;
-      border-top: 1px solid #ddd;
-    }
-    .project {
-      border: 1px solid #ddd;
-      padding: 24px;
-      margin: 18px 0;
-      border-radius: 8px;
-    }
-    .project h3 { margin-top: 0; }
-    .project a {
-      color: #171717;
-      font-weight: bold;
-    }
-    footer {
-      border-top: 1px solid #ddd;
-      color: #555;
-      font-size: 13px;
-    }
-    @media (max-width: 600px) {
-      header { align-items: flex-start; flex-direction: column; }
-      nav a { margin: 0 14px 0 0; }
-      .hero { padding: 48px 0; }
+
+    @media (max-width: 720px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      nav { gap: 14px; }
+
+      .hero { padding: 54px 0 44px; }
+
+      .quick-facts { grid-template-columns: 1fr; }
+
+      .fact, .fact + .fact {
+        border-left: 0;
+        padding: 14px 0;
+      }
+
+      .fact + .fact { border-top: 1px solid var(--line); }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .skills-grid { grid-template-columns: 1fr; }
+
+      .project-top, .job-top, .contact-box, .education {
+        flex-direction: column;
+      }
+
+      .education time { white-space: normal; }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <strong>MINH-THI NGUYEN</strong>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="wrap nav">
+      <a class="brand" href="#top" style="text-decoration:none">
+        MINH-THI NGUYEN
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">Data Analytics & Business Intelligence</p>
-      <h1>Turning data into<br>better decisions.</h1>
-      <p class="muted">
-        I use SQL, Power BI, and Excel to organize data,
-        uncover trends, and translate business questions
-        into actionable insights.
-      </p>
-      <div class="skills">
-        <span>Power BI</span>
-        <span>SQL</span>
-        <span>DAX</span>
-        <span>Excel</span>
-        <span>Business Analysis</span>
+  <main id="top">
+    <div class="wrap">
+
+      <section class="hero" style="border-bottom:0">
+        <p class="eyebrow">
+          Business Analysis · Business Systems · Data & Reporting
+        </p>
+
+        <h1>Turning business data into clearer decisions.</h1>
+
+        <p class="lead">
+          Business Analyst with an Information Systems & Technology
+          background and experience using business data, relational
+          databases, and reporting to improve operations and support
+          data-backed decisions. Focused on Power BI, SQL, DAX,
+          workflow improvement, data quality, and cross-functional
+          coordination.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore Projects</a>
+          <a class="button" href="https://www.linkedin.com/confirmmtn/"
+             target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+          <a class="button" href="mailto:reach.minhnguyen@gmail.com">Email Me</a>
+        </div>
+
+        <div class="tag-list" aria-label="Core tools">
+          <span class="tag">Power BI</span>
+          <span class="tag">SQL</span>
+          <span class="tag">DAX</span>
+          <span class="tag">Excel</span>
+          <span class="tag">KPI Reporting</span>
+          <span class="tag">Data Quality</span>
+        </div>
+      </section>
+
+      <div class="quick-facts" aria-label="Professional highlights">
+        <div class="fact">
+          <strong>Business + Technical</strong>
+          <span>Requirements, processes, systems, and reporting</span>
+        </div>
+        <div class="fact">
+          <strong>E-commerce Analytics</strong>
+          <span>Purchasing patterns, sales trends, and inventory decisions</span>
+        </div>
+        <div class="fact">
+          <strong>Operational Improvement</strong>
+          <span>Data integrity, workflows, and performance visibility</span>
+        </div>
       </div>
-    </section>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <p class="muted">
-        Practical projects exploring sales performance,
-        inventory, profitability, and business operations.
-      </p>
+      <section id="skills">
+        <div class="section-head">
+          <h2>Core Skills</h2>
+          <p class="section-intro">
+            A blend of analytical tools, business process knowledge,
+            and operational technology experience.
+          </p>
+        </div>
 
-      <article class="project">
-        <p class="eyebrow">Project 01 · In Progress</p>
-        <h3>Resale Business Intelligence</h3>
-        <p>
-          Analyze Pokémon products, iPhones, and sneakers
-          to understand revenue, profit margins, inventory
-          turnover, and purchasing opportunities.
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Business Analysis</h3>
+            <p>
+              Workflow improvement, requirements gathering, process
+              documentation, cross-functional coordination, and
+              operational problem-solving.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Data & Reporting</h3>
+            <p>
+              Power BI, SQL joins and CTEs, aggregations, DAX modeling,
+              KPI development, Excel formulas, and PivotTables.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Business Systems & Tools</h3>
+            <p>
+              Salesforce, HubSpot, Google Workspace, Microsoft Office,
+              AWS Cloud Infrastructure, data quality assurance,
+              and SLA monitoring.
+            </p>
+          </article>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+          </span>
+          <span class="tag">AWS Certified Cloud Practitioner</span>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <h2>Selected Projects</h2>
+          <p class="section-intro">
+            Project summaries based on the experience and projects
+            listed on my resume. Additional portfolio projects and
+            demonstrations can be added as they are completed.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-top">
+              <div>
+                <span class="project-label">Power BI · SQL · Excel</span>
+                <h3>IT Support Operations & SLA Compliance Dashboard</h3>
+              </div>
+              <span class="tag">Reporting & Operations</span>
+            </div>
+
+            <p>
+              Designed an analytical reporting solution concept focused
+              on service desk performance, ticket volume, and
+              priority-based Service Level Agreement (SLA) breaches.
+            </p>
+
+            <ul>
+              <li>
+                Structured relational ticket, team, and status data
+                using SQL CTEs, LEFT JOINs, and conditional aggregation.
+              </li>
+              <li>
+                Defined Power BI semantic-model measures for SLA
+                compliance rates and average resolution times.
+              </li>
+              <li>
+                Used conditional formatting to highlight overdue
+                tickets and potential operational bottlenecks.
+              </li>
+            </ul>
+
+            <p class="tools">
+              Add sanitized screenshots or sample files when available.
+            </p>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div>
+                <span class="project-label">Excel · Reporting</span>
+                <h3>Excel Sales Performance & Inventory Analysis</h3>
+              </div>
+              <span class="tag">Sales & Inventory</span>
+            </div>
+
+            <p>
+              Built a reporting workbook to summarize sales trends,
+              product performance, and inventory movement.
+            </p>
+
+            <ul>
+              <li>
+                Used PivotTables, formulas, and charts to make
+                performance patterns easier to review.
+              </li>
+              <li>
+                Applied lookup functions, conditional formatting,
+                and data validation to flag inconsistencies and
+                products needing replenishment or further review.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div>
+                <span class="project-label">Planned Portfolio Project</span>
+                <h3>Resale Business Intelligence</h3>
+              </div>
+              <span class="tag">In Progress</span>
+            </div>
+
+            <p>
+              Planned analysis of resale inventory such as Pokémon
+              products, iPhones, and sneakers, focusing on sales
+              performance, purchase costs, fees, margins, and
+              inventory movement.
+            </p>
+
+            <ul>
+              <li>
+                Organize product, purchase, and sales records into
+                relational tables using SQL.
+              </li>
+              <li>
+                Build Power BI measures and dashboards for revenue,
+                realized profit, margin, and inventory status.
+              </li>
+              <li>
+                Use findings to support purchasing and pricing
+                decisions after analysis is completed.
+              </li>
+            </ul>
+
+            <p class="tools">
+              Planned tools: SQL · Power BI · DAX · Excel.
+              Results will be added after analysis is completed.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-head">
+          <h2>Professional Experience</h2>
+          <p class="section-intro">
+            Experience across e-commerce analytics, operations
+            management, data reporting, and technology support.
+          </p>
+        </div>
+
+        <div class="experience-list">
+          <article class="job">
+            <h3>Business Data Analyst & Operations Management</h3>
+            <strong>AMG Marketing Inc.</strong>
+            <div class="job-meta">Remote · Apr 2024 – Present</div>
+            <ul>
+              <li>
+                Analyze e-commerce purchasing patterns and market
+                trends to inform buying decisions and operational
+                adjustments.
+              </li>
+              <li>
+                Used performance and volume analysis to negotiate
+                third-party platform commission rates from 15% to
+                an average of 6%, improving net profitability after fees.
+              </li>
+              <li>
+                Maintain data integrity and streamline workflows
+                through Excel-based tracking, asset records, and
+                standard operating procedures.
+              </li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Business Operations Manager</h3>
+            <strong>Swoosh Deals LLC</strong>
+            <div class="job-meta">Remote · Dec 2020 – 2024</div>
+            <ul>
+              <li>
+                Led a four-person operations team in building,
+                cleaning, and maintaining structured sales datasets.
+              </li>
+              <li>
+                Used Excel and Power BI to analyze sales trends and
+                vendor market performance, supporting contract
+                negotiations totaling tens of thousands of dollars.
+              </li>
+              <li>
+                Applied historical sales and online consumer data
+                in dashboards to support purchasing forecasts,
+                improve inventory decisions, and reduce excess stock.
+              </li>
+              <li>
+                Wrote SQL queries using joins, CTEs, and aggregations
+                to combine sales, product, and vendor data.
+              </li>
+              <li>
+                Validated source data for duplicates, missing values,
+                and inconsistent product records before reporting.
+              </li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Operations & Purchase Data Analyst</h3>
+            <strong>Key Investment Group LLC</strong>
+            <div class="job-meta">Pikesville, MD · Oct 2020 – Dec 2023</div>
+            <ul>
+              <li>
+                Conducted market research to identify product
+                expansion opportunities and support go-to-market planning.
+              </li>
+              <li>
+                Maintained CRM data integrity to identify prospective
+                customer segments and support growth initiatives.
+              </li>
+              <li>
+                Supported software updates, hardware maintenance,
+                secure network access control, and routine troubleshooting.
+              </li>
+              <li>
+                Maintained device and software records and documented
+                recurring technical issues to improve asset visibility.
+              </li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Work-Study Intern</h3>
+            <strong>Community College of Baltimore County</strong>
+            <div class="job-meta">Baltimore, MD · Sep 2016 – Apr 2020</div>
+            <ul>
+              <li>
+                Organized student and faculty records to support
+                academic advising and student services.
+              </li>
+              <li>
+                Prepared daily operational status and staff scheduling
+                reports to improve visibility into advisor workloads.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p class="section-intro">
+            Academic foundation in information systems, technology,
+            and business/data analysis.
+          </p>
+        </div>
+
+        <div class="education">
+          <div>
+            <strong>B.S. in Information Systems & Technology</strong>
+            <p>University of Maryland, Towson University</p>
+            <p>Concentration in Business / Data Analyst</p>
+            <p>GPA: 3.7 · Dean’s List (2 times)</p>
+          </div>
+          <time>May 2024</time>
+        </div>
+      </section>
+
+      <section id="contact" style="border-bottom:0">
+        <div class="contact-box">
+          <div>
+            <p class="eyebrow">Get in touch</p>
+            <h2>Let's connect.</h2>
+            <p>
+              Open to conversations about business analysis,
+              data analytics, reporting, and business intelligence.
+            </p>
+          </div>
+
+          <div class="hero-actions" style="margin-top:0">
+            <a class="button primary"
+               href="mailto:reach.minhnguyen@gmail.com">Email</a>
+            <a class="button"
+               href="https://www.linkedin.com/confirmmtn/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <p class="tools" style="margin-top:16px">
+          Email: reach.minhnguyen@gmail.com · Phone: (443) 895-7644
         </p>
-        <p><strong>Tools:</strong> SQL · Power BI · DAX</p>
-        <p class="muted">
-          Deliverables: interactive dashboard, SQL analysis,
-          and business recommendations.
-        </p>
-      </article>
+      </section>
 
-      <article class="project">
-        <p class="eyebrow">Project 02 · Planned</p>
-        <h3>Inventory Optimization</h3>
-        <p>
-          Evaluate stock levels, inventory aging, and
-          capital tied up in unsold products.
-        </p>
-        <p><strong>Tools:</strong> Excel · SQL · Power BI</p>
-      </article>
-
-      <article class="project">
-        <p class="eyebrow">Project 03 · Planned</p>
-        <h3>Order & Fulfillment Analytics</h3>
-        <p>
-          Examine order statuses, delivery timelines,
-          outstanding orders, and data quality.
-        </p>
-        <p><strong>Tools:</strong> SQL · Power BI</p>
-      </article>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        I have an Information Systems & Technology
-        background and an interest in data analytics,
-        business processes, and technology. I enjoy
-        learning new tools, solving problems, and
-        communicating with people to understand different
-        perspectives. My goal is to turn complex data
-        into clear, useful business insights.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Technical Skills</h2>
-      <p>
-        <strong>Data:</strong> SQL, joins, CTEs,
-        aggregations, data cleaning
-      </p>
-      <p>
-        <strong>Visualization:</strong> Power BI,
-        DAX, KPI development, reporting
-      </p>
-      <p>
-        <strong>Productivity:</strong> Excel,
-        data validation, process improvement
-      </p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>
-        Interested in discussing data, analytics,
-        or business intelligence opportunities?
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/"
-           target="_blank" rel="noopener noreferrer">
-          Connect on LinkedIn
-        </a>
-      </p>
-      <p class="muted">
-        Replace this link with your actual LinkedIn profile.
-      </p>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>© 2026 Minh-Thi Nguyen · Data Analytics Portfolio</p>
+    <div class="wrap">
+      © 2026 Minh-Thi Nguyen · Business Analysis & Data Analytics Portfolio
+    </div>
   </footer>
 </body>
 </html>
