@@ -72,20 +72,3 @@ footer{border-top:1px solid var(--line);padding:24px 0 34px;color:var(--muted);f
 .dashboard-frame{width:100%;border:1px solid rgba(103,232,249,.3);border-radius:12px;overflow:hidden;background:#080913;box-shadow:0 18px 55px rgba(0,0,0,.3);}
 .dashboard-frame iframe{display:block;width:100%;height:calc(100vh - 110px);min-height:850px;border:0;background:#080913;}
 @media(max-width:760px){.dashboard-stage{width:calc(100% - 16px);margin:4px auto 32px}.dashboard-description p:not(.project-label){font-size:12px}.dashboard-frame iframe{height:1500px;min-height:1500px}.dashboard-frame{border-radius:8px}}
-
-/* Restored project summary above the full-width interactive dashboard */
-.dashboard-project-details{max-width:1500px;margin:0 auto;padding:24px 26px;}
-.dashboard-project-details h2{font-size:clamp(22px,2.2vw,30px);margin:7px 0 10px;}
-.dashboard-project-details li strong{color:#fff;}
-.dashboard-project-details .button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:9px 13px;border:1px solid rgba(193,203,255,.22);border-radius:8px;color:#f5f6ff;background:rgba(255,255,255,.035);font-size:12px;}
-.dashboard-project-details .button:hover{border-color:var(--cyan);color:var(--cyan);}
-@media(max-width:760px){.dashboard-project-details{padding:18px;}}
-
-/* Separate project summary card and dashboard demo card */
-.dashboard-demo-box{width:min(1600px,calc(100% - 32px));margin:0 auto 48px;padding:20px;border:1px solid rgba(167,139,250,.32);border-radius:16px;background:linear-gradient(145deg,rgba(18,22,43,.96),rgba(11,12,27,.98));box-shadow:0 18px 55px rgba(0,0,0,.24)}
-.dashboard-demo-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:2px 4px 16px}
-.dashboard-demo-heading .project-label{margin:0 0 5px}
-.dashboard-demo-heading h2{font-size:clamp(20px,2vw,27px);margin:0}
-.dashboard-demo-box .dashboard-frame{width:100%;border:1px solid rgba(103,232,249,.3);border-radius:10px;overflow:hidden;background:#080913}
-.dashboard-demo-box .dashboard-frame iframe{display:block;width:100%;height:calc(100vh - 145px);min-height:780px;border:0;background:#080913}
-@media(max-width:760px){.dashboard-demo-box{width:calc(100% - 16px);padding:12px;margin-bottom:30px}.dashboard-demo-heading{align-items:flex-start;flex-direction:column;padding:4px 3px 12px}.dashboard-demo-box .dashboard-frame iframe{height:1500px;min-height:1500px}}
